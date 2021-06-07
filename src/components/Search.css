@@ -1,3 +1,64 @@
-div {
-    border: 25px solid black;
+* {
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .btn-search {
+  margin-top: 10px;
+  margin-bottom: 15px;
+    background-color: #6455c9;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+  }
+  .app{
+    display: inline-table;
+    width: calc(100vw - 80px);
+    background-color: #759EDA;
+    font-family: "Raleway", sans-serif;
+    padding-bottom: 20px;
+  
+  }
+  .city {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    margin-left: 15px;
+    margin-top: 20px;
+    font-size: 17px;
+    border: none;
+    outline: none;
+    margin-right: 5px;
+  }
+  .city::placeholder {
+    opacity: 0;
+  }
+  .city:focus::placeholder {
+    color: white;
+    opacity: 0.5;
+  
+  }
+  .city:focus{
+    border-bottom: 1px solid black;
+    outline: none;
+  }
+  .images{
+    padding-top: 30px;
+    background-color: #9cc2f7;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:space-around;
+  }
+  @media all and (max-width: 390px) {
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
 }
+  
+    .btn-search {
+      margin-top: 10px;
+    }

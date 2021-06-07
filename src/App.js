@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Search from "./components/Search";
 
-import SayHi, { SayHello } from "./components/WeatherItem";
 import fakeWeatherData from "./fakeWeatherData.json";
 
 import "./App.css";
@@ -21,9 +20,16 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <SayHi />
-        <SayHello color="black" name={this.state.name} />
         <Search handleInput={this.handleInputChange} />
+        <div className="images">
+          <img src="https://placekitten.com/100/100" alt="kitten"/>
+          <img src="https://placekitten.com/100/100" alt="kitten"/>
+          <img src="https://placekitten.com/100/100" alt="kitten"/>
+          <img src="https://placekitten.com/100/100" alt="kitten"/>
+          <img src="https://placekitten.com/100/100" alt="kitten"/>
+          <img src="https://placekitten.com/100/100" alt="kitten"/>
+          <img src="https://placekitten.com/100/100" alt="kitten"/>
+        </div>
       </div>
     );
   }
