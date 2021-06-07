@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Search from "./components/Search";
+import TodayWeather from "./TodayWeather";
+import HourlyWeather from "./HourlyWeather";
 
 import fakeWeatherData from "./fakeWeatherData.json";
 
@@ -21,6 +23,8 @@ class App extends Component {
     return (
       <div className="app">
         <Search handleInput={this.handleInputChange} />
+        <TodayWeather/>
+        <HourlyWeather/>
         <div className="images">
           <img src="https://placekitten.com/100/100" alt="kitten"/>
           <img src="https://placekitten.com/100/100" alt="kitten"/>
