@@ -2,31 +2,26 @@ import React from "react";
 
 import clear from "../img/weather-icons/clear.svg";
 import "./Search.css";
-class Search extends React.Component {
+
+class Weather extends React.Component {
   state = {
-    input: ""
+    input: "",
   };
 
   render() {
     return (
-      <div>
-        {this.state.input}
-        <input
-          type="text"
-          id="input-name"
-          onChange={event => {
-            this.setState({ input: event.target.value });
-          }}
-        />
-        <button
-          onClick={event => {
-            this.props.handleInput(this.state.input);
-          }}
-        >
-          Say Hello
-        </button>
+      <div className = "minibateekhwrapper">
+        <div className = "minihourdegree">
+          <label>03:00</label>
+        </div>
+        <div className = "minibateekhimg"> 
+          <label><img src = {clear}/></label>
+        </div>
+        <div className = "minihourdegree">
+          <label>8 &#8451;</label>
+        </div>
       </div>
     );
   }
 }
-export default Search;
+export default Weather;

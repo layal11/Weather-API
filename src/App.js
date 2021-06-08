@@ -1,17 +1,18 @@
 import React, { Component } from "react";
-import Search from "./components/Search";
+import Weather from "./components/Search";
 
-import SayHi, { SayHello } from "./components/WeatherItem";
-import fakeWeatherData from "./fakeWeatherData.json";
-
+import NavBar, { OvercastCloud } from "./components/WeatherItem";
+import fakeWeatherData from "./data/Fakeweather.json";
 import "./App.css";
+import CurrentWeather from './components/CurrentWeather';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "Layal / Mohamad"
+      name: <CurrentWeather /> 
     };
+    // console.log(fakeWeatherData.cod)
   }
 
   handleInputChange = value => {
@@ -20,10 +21,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="app">
-        <SayHi />
-        <SayHello color="black" name={this.state.name} />
-        <Search handleInput={this.handleInputChange} />
+      <div className = "app">
+        <NavBar />
+        <OvercastCloud name={this.state.name} />
+        <Weather handleInput = {this.handleInputChange} />
       </div>
     );
   }
