@@ -1,6 +1,6 @@
 import React from "react";
 
-import clear from "../img/weather-icons/clear.svg";
+// import clear from "../img/weather-icons/clear.svg";
 import "./Search.css";
 
 class Weather extends React.Component {
@@ -12,13 +12,13 @@ class Weather extends React.Component {
     return (
       <div className = "minibateekhwrapper">
         <div className = "minihourdegree">
-          <label>03:00</label>
+          <label>{this.props.hour}</label>
         </div>
         <div className = "minibateekhimg"> 
-          <label><img src = {clear}/></label>
+          <label><img src = { this.props.image }/></label>
         </div>
         <div className = "minihourdegree">
-          <label>8 &#8451;</label>
+          <label>{this.props.temp} &#8451;</label>
         </div>
       </div>
     );

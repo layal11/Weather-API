@@ -32,11 +32,7 @@ body{
   background-color: #5879C7;
   color: #14235E;
   border:0px;
-}
 
-.findweather,
-.txt{
-  padding: 0.7rem;
 }
 
 .txt{
@@ -47,6 +43,17 @@ body{
   font-size: 14px;
   width: 10rem;
 }
+
+.txt:focus{
+  outline: none;
+  border-bottom: 1px solid rgb(238, 233, 233);
+}
+
+.findweather,
+.txt{
+  padding: 0.7rem;
+}
+
 
 /* -------------------------------------------- */
 /* -------------------------------------------- */
@@ -78,18 +85,26 @@ body{
 /* -------------------------------------------- */
 
 .minibateekhwrapper{
-  text-align: center;
+  display:flex;
+  flex-direction: column;
 }
 .minihourdegree{
   font-size: 14px;
   color: black;
+  text-align: center;
 }
 .minibateekhimg{
-  width:10rem;
+  width:7rem;
   margin: auto;
 }
 
 /* -------------------------------------------- */
 /* -------------------------------------------- */
 
-
+.sayHello{
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 5rem;
+  width: 80% ;
+}
