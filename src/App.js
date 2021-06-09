@@ -38,23 +38,33 @@ class App extends Component {
     const CITY_NAME = value;
     const url = `http://api.openweathermap.org/data/2.5/forecast?q=${CITY_NAME}&cnt=8&units=metric&appid=${this.YOUR_API_KEY}`;
 
-    fetch(url)
-      .then((response) =>
+    try {
+      fetch(url).then((response) => {
         response.json().then((data) => {
           // console.log(data);
-          this.setState({
-            name: data.list,
-            mintemp: data.list[0].main.temp_min,
-            maxtemp: data.list[0].main.temp_max,
-            humidity: data.list[0].main.humidity,
-            pressure: data.list[0].main.pressure,
-            overcast: data.list[0].weather[0].description
-          });
-        })
-      )
-      // .catch((e) => { 
-      //   console.log(e);
-      // });
+          if (data.list !== undefined && data.list !== null) {
+
+             this.setState({
+              name: data.list,
+              mintemp: data.list[0].main.temp_min,
+              maxtemp: data.list[0].main.temp_max,
+              humidity: data.list[0].main.humidity,
+              pressure: data.list[0].main.pressure,
+              overcast: data.list[0].weather[0].description,
+            });
+
+            this.setState((oldprops , oldstate) => {
+              console.log(oldprops , oldstate);
+            })
+           
+          } else {
+            alert("City doesn't exist or misspelled");
+          }
+        });
+      });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   getImage = (id) => {
@@ -117,8 +127,7 @@ class App extends Component {
             />
           }
         />
-        
-        <div className = "sayHello">
+        <div className="sayHello">
           {this.state.name.map((elt) => {
             const time = parseInt(elt.dt_txt.slice(10, 14));
             // console.log("time", time);
