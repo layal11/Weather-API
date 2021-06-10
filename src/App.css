@@ -1,25 +1,110 @@
+body{
+  margin: 0px;
+}
+
 .app {
-  height: 100vh;
-  width: 100vw;
-  transition: background-color 1s ease-in;
+  background-color: #9CCEF4;
 }
 
 .app__header,
 .app__main {
-  width: 100%;
+  font-family: "Raleway", sans-serif;
+  /* width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  font-family: "Raleway", sans-serif;
+  padding: 20px; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/*  Search bar */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/*  Search Bar */
+.searchbar{
+  display: flex;
+  background-color: #759EDA;
+  padding: 25px;
 
-/* Current weather */
+}
 
-div {
-  border: 5px solid red;
+.findweather{
+  background-color: #5879C7;
+  color: #14235E;
+  border:0px;
+
+}
+
+.txt{
+  background-color: transparent;
+  border: 0px;
+  color: white;
+  /* font-weight: bold; */
+  font-size: 14px;
+  width: 10rem;
+}
+
+.txt:focus{
+  outline: none;
+  border-bottom: 1px solid rgb(238, 233, 233);
+}
+
+.findweather,
+.txt{
+  padding: 0.7rem;
+}
+
+
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+
+.bateekhwrapper{
+  text-align: center;
+}
+
+.bateekhimg{
+  width: 11rem;
+}
+
+.bateekhovercast{
+  color: white;
+  font-size: 20px;
+}
+
+.bateekhtemp,
+.bateekhhum{
+  padding: 0.8rem;
+  color: #091948;
+}
+
+.bateekhhum{
+  font-size: smaller;
+}
+
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+
+.minibateekhwrapper{
+  display:flex;
+  flex-direction: column;
+}
+.minihourdegree{
+  font-size: 14px;
+  color: black;
+  text-align: center;
+}
+.minibateekhimg{
+  width:7rem;
+  margin: auto;
+}
+
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+
+.sayHello{
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 5rem;
+  width: 80% ;
 }
